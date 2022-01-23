@@ -1,0 +1,152 @@
+2022-01-24 00:01:17.997 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] Starting DzxdzApplication on DESKTOP-PO1IHQL with PID 5988 (D:\ideaProject\dzxdz\target\classes started by wan in D:\ideaProject\dzxdz)
+2022-01-24 00:01:18.003 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] No active profile set, falling back to default profiles: default
+2022-01-24 00:01:18.891 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:01:18.902 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$37f66f5e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:01:18.970 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:01:19.215 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] Tomcat initialized with port(s): 8089 (http)
+2022-01-24 00:01:19.221 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Initializing ProtocolHandler ["http-nio-8089"]
+2022-01-24 00:01:19.222 [main] INFO  o.a.catalina.core.StandardService - [] Starting service [Tomcat]
+2022-01-24 00:01:19.223 [main] INFO  o.a.catalina.core.StandardEngine - [] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-01-24 00:01:19.288 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] Initializing Spring embedded WebApplicationContext
+2022-01-24 00:01:19.289 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - [] Root WebApplicationContext: initialization completed in 1233 ms
+2022-01-24 00:01:19.404 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-24 00:01:19.551 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-24 00:01:19.748 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-24 00:01:20.437 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-24 00:01:20.767 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-24 00:01:20.803 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Starting ProtocolHandler ["http-nio-8089"]
+2022-01-24 00:01:20.822 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] Tomcat started on port(s): 8089 (http) with context path ''
+2022-01-24 00:01:20.834 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] Started DzxdzApplication in 3.21 seconds (JVM running for 3.952)
+2022-01-24 00:01:55.135 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] Starting DzxdzApplication on DESKTOP-PO1IHQL with PID 13636 (D:\ideaProject\dzxdz\target\classes started by wan in D:\ideaProject\dzxdz)
+2022-01-24 00:01:55.140 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] No active profile set, falling back to default profiles: default
+2022-01-24 00:01:56.129 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:01:56.131 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$7f378d68] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:01:56.204 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:01:56.445 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] Tomcat initialized with port(s): 8089 (http)
+2022-01-24 00:01:56.453 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Initializing ProtocolHandler ["http-nio-8089"]
+2022-01-24 00:01:56.454 [main] INFO  o.a.catalina.core.StandardService - [] Starting service [Tomcat]
+2022-01-24 00:01:56.454 [main] INFO  o.a.catalina.core.StandardEngine - [] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-01-24 00:01:56.523 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] Initializing Spring embedded WebApplicationContext
+2022-01-24 00:01:56.524 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - [] Root WebApplicationContext: initialization completed in 1329 ms
+2022-01-24 00:01:56.644 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-24 00:01:56.793 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-24 00:01:57.000 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-24 00:01:57.663 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-24 00:01:58.013 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-24 00:01:58.051 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Starting ProtocolHandler ["http-nio-8089"]
+2022-01-24 00:01:58.062 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - [] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8089 is already in use
+2022-01-24 00:01:58.062 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Shutting down ExecutorService 'taskScheduler'
+2022-01-24 00:01:58.063 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-24 00:01:58.063 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closing ...
+2022-01-24 00:01:58.064 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closed
+2022-01-24 00:01:58.067 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Pausing ProtocolHandler ["http-nio-8089"]
+2022-01-24 00:01:58.068 [main] INFO  o.a.catalina.core.StandardService - [] Stopping service [Tomcat]
+2022-01-24 00:01:58.070 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Stopping ProtocolHandler ["http-nio-8089"]
+2022-01-24 00:01:58.071 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Destroying ProtocolHandler ["http-nio-8089"]
+2022-01-24 00:01:58.077 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - [] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-24 00:01:58.081 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8089 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8089 or configure this application to listen on another port.
+
+2022-01-24 00:02:19.636 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] Starting DzxdzApplication on DESKTOP-PO1IHQL with PID 12012 (D:\ideaProject\dzxdz\target\classes started by wan in D:\ideaProject\dzxdz)
+2022-01-24 00:02:19.640 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] No active profile set, falling back to default profiles: default
+2022-01-24 00:02:20.643 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:02:20.645 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$57cf4363] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:02:20.714 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:02:20.956 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] Tomcat initialized with port(s): 8081 (http)
+2022-01-24 00:02:20.963 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Initializing ProtocolHandler ["http-nio-8081"]
+2022-01-24 00:02:20.964 [main] INFO  o.a.catalina.core.StandardService - [] Starting service [Tomcat]
+2022-01-24 00:02:20.965 [main] INFO  o.a.catalina.core.StandardEngine - [] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-01-24 00:02:21.034 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] Initializing Spring embedded WebApplicationContext
+2022-01-24 00:02:21.034 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - [] Root WebApplicationContext: initialization completed in 1336 ms
+2022-01-24 00:02:21.161 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-24 00:02:21.311 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-24 00:02:21.520 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-24 00:02:22.189 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-24 00:02:22.520 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-24 00:02:22.556 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Starting ProtocolHandler ["http-nio-8081"]
+2022-01-24 00:02:22.575 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-24 00:02:22.587 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] Started DzxdzApplication in 3.271 seconds (JVM running for 3.941)
+2022-01-24 00:02:38.622 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rmyh.dzxdz.DzxdzApplicationTests], using SpringBootContextLoader
+2022-01-24 00:02:38.631 [main] INFO  o.s.t.c.s.AbstractContextLoader - [] Could not detect default resource locations for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-24 00:02:38.632 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [] Could not detect default configuration classes for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: DzxdzApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-24 00:02:38.804 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Found @SpringBootConfiguration com.rmyh.dzxdz.DzxdzApplication for test class com.rmyh.dzxdz.DzxdzApplicationTests
+2022-01-24 00:02:38.951 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-24 00:02:38.971 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@189cbd7c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7bf3a5d8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@42e25b0b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@39b43d60, org.springframework.test.context.support.DirtiesContextTestExecutionListener@44be0077, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2205a05d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@72ef8d15, org.springframework.test.context.event.EventPublishingTestExecutionListener@6aa8e115, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5e21e98f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@51a9ad5e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5f20155b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@72ade7e3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@239105a8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3fce8fd9]
+2022-01-24 00:02:39.348 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Starting DzxdzApplicationTests on DESKTOP-PO1IHQL with PID 9428 (started by wan in D:\ideaProject\dzxdz)
+2022-01-24 00:02:39.349 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] No active profile set, falling back to default profiles: default
+2022-01-24 00:02:40.522 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:02:40.528 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$37ea492c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:02:40.690 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:02:40.850 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-24 00:02:41.197 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-24 00:02:41.393 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-24 00:02:42.618 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-24 00:02:43.202 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-24 00:02:43.274 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Started DzxdzApplicationTests in 4.241 seconds (JVM running for 5.769)
+2022-01-24 00:02:43.525 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待加密的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-24 00:02:44.153 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待发送的数据:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220124000244","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-24 00:02:44.248 [http-nio-8089-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-24 00:02:44.248 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - [] Initializing Servlet 'dispatcherServlet'
+2022-01-24 00:02:44.267 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - [] Completed initialization in 19 ms
+2022-01-24 00:02:44.388 [http-nio-8089-exec-1] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220124000244","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-24 00:02:44.402 [http-nio-8089-exec-1] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=
+2022-01-24 00:02:44.631 [http-nio-8089-exec-1] INFO  c.r.dzxdz.service.DataProcessService - [] 解密后的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-24 00:02:44.632 [http-nio-8089-exec-1] INFO  c.r.dzxdz.service.DataProcessService - [] 验签结果:通过
+2022-01-24 00:02:44.637 [http-nio-8089-exec-1] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"bizState":"S","rspTime":"20220124000244"}
+2022-01-24 00:02:44.682 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 返回数据:{"bizState":"S","rspTime":"20220124000244"}
+2022-01-24 00:02:44.704 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Shutting down ExecutorService 'taskScheduler'
+2022-01-24 00:02:44.705 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-24 00:02:44.706 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closing ...
+2022-01-24 00:02:44.707 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closed
+2022-01-24 00:03:32.046 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] Starting DzxdzApplication on DESKTOP-PO1IHQL with PID 5008 (D:\ideaProject\dzxdz\target\classes started by wan in D:\ideaProject\dzxdz)
+2022-01-24 00:03:32.049 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] No active profile set, falling back to default profiles: default
+2022-01-24 00:03:32.954 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:03:32.955 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$bc7c19b8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:03:33.030 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-24 00:03:33.278 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] Tomcat initialized with port(s): 8081 (http)
+2022-01-24 00:03:33.285 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Initializing ProtocolHandler ["http-nio-8081"]
+2022-01-24 00:03:33.286 [main] INFO  o.a.catalina.core.StandardService - [] Starting service [Tomcat]
+2022-01-24 00:03:33.286 [main] INFO  o.a.catalina.core.StandardEngine - [] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-01-24 00:03:33.367 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] Initializing Spring embedded WebApplicationContext
+2022-01-24 00:03:33.368 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - [] Root WebApplicationContext: initialization completed in 1283 ms
+2022-01-24 00:03:33.495 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-24 00:03:33.643 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-24 00:03:33.839 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-24 00:03:34.516 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-24 00:03:34.854 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-24 00:03:34.890 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Starting ProtocolHandler ["http-nio-8081"]
+2022-01-24 00:03:34.908 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-24 00:03:34.921 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] Started DzxdzApplication in 3.195 seconds (JVM running for 3.908)

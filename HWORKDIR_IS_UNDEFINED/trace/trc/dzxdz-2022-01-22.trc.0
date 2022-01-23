@@ -1,0 +1,871 @@
+2022-01-22 11:06:37.231 [http-nio-8089-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - [] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.alibaba.fastjson.JSONObject com.rmyh.dzxdz.controller.TestController.json(com.alibaba.fastjson.JSONObject)]
+2022-01-22 11:06:43.545 [http-nio-8089-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - [] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.alibaba.fastjson.JSONObject com.rmyh.dzxdz.controller.TestController.json(com.alibaba.fastjson.JSONObject)]
+2022-01-22 11:07:55.275 [http-nio-8089-exec-8] INFO  c.r.dzxdz.controller.TestController - [] 接收到的报文:{"name":"1","id":"1"}
+2022-01-22 11:07:55.461 [http-nio-8089-exec-8] DEBUG c.r.d.r.EleCarryCerInfoMapper.insert - [] ==>  Preparing: INSERT INTO 电子携带证_主表 ( 携带证编号, 姓名, 证件类别, 证件号码, 国籍, 前往目的地, 携带币种, 携带金额, 折算美元金额, 签发日期, 有效日期 ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2022-01-22 11:07:55.488 [http-nio-8089-exec-8] DEBUG c.r.d.r.EleCarryCerInfoMapper.insert - [] ==> Parameters: 74b56acead47489e82c8e0016eff8038(String), 张剑锋(String), 01(String), 440304(String), Chinese(String), France(String), USD(String), 5.3300000000000000710542735760100185871124267578125(BigDecimal), 5.3300000000000000710542735760100185871124267578125(BigDecimal), 20220120(String), 20220220(String)
+2022-01-22 11:07:55.492 [http-nio-8089-exec-8] DEBUG c.r.d.r.EleCarryCerInfoMapper.insert - [] <==    Updates: 1
+2022-01-22 11:07:55.514 [http-nio-8089-exec-8] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"rspCode":"000000","rspMsg":"交易成功","bizState":"S","rspTime":"20220122110755"}
+2022-01-22 11:08:19.985 [http-nio-8089-exec-9] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"name":"1","id":"1"}
+2022-01-22 11:08:19.992 [http-nio-8089-exec-9] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:null
+2022-01-22 11:08:19.996 [http-nio-8089-exec-9] ERROR c.r.d.controller.NoticeController - [] 处理数据异常:
+java.lang.NullPointerException: null
+	at com.rmyh.dzxdz.common.utils.SecurityUtils.AESDecode(SecurityUtils.java:30)
+	at com.rmyh.dzxdz.service.DataProcessService.AESDecode(DataProcessService.java:47)
+	at com.rmyh.dzxdz.service.DataProcessService.handle(DataProcessService.java:91)
+	at com.rmyh.dzxdz.controller.NoticeController.json(NoticeController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2022-01-22 11:08:19.997 [http-nio-8089-exec-9] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"rspCode":"000001","rspMsg":"数据异常","bizState":"F","rspTime":"20220122110819"}
+2022-01-22 11:12:46.490 [http-nio-8089-exec-1] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"name":"1","id":"1"}
+2022-01-22 11:12:46.490 [http-nio-8089-exec-1] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:null
+2022-01-22 11:12:46.490 [http-nio-8089-exec-1] ERROR c.r.d.controller.NoticeController - [] 处理数据异常:
+java.lang.NullPointerException: null
+	at com.rmyh.dzxdz.common.utils.SecurityUtils.AESDecode(SecurityUtils.java:30)
+	at com.rmyh.dzxdz.service.DataProcessService.AESDecode(DataProcessService.java:47)
+	at com.rmyh.dzxdz.service.DataProcessService.handle(DataProcessService.java:91)
+	at com.rmyh.dzxdz.controller.NoticeController.json(NoticeController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2022-01-22 11:12:46.491 [http-nio-8089-exec-1] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"rspCode":"000001","rspMsg":"数据异常","bizState":"F","rspTime":"20220122111246"}
+2022-01-22 11:13:55.490 [http-nio-8089-exec-10] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"signatureValue":"2"}
+2022-01-22 11:13:55.492 [http-nio-8089-exec-10] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:null
+2022-01-22 11:13:55.493 [http-nio-8089-exec-10] ERROR c.r.d.controller.NoticeController - [] 处理数据异常:
+java.lang.NullPointerException: null
+	at com.rmyh.dzxdz.common.utils.SecurityUtils.AESDecode(SecurityUtils.java:30)
+	at com.rmyh.dzxdz.service.DataProcessService.AESDecode(DataProcessService.java:47)
+	at com.rmyh.dzxdz.service.DataProcessService.handle(DataProcessService.java:91)
+	at com.rmyh.dzxdz.controller.NoticeController.json(NoticeController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2022-01-22 11:13:55.495 [http-nio-8089-exec-10] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"rspCode":"000001","rspMsg":"数据异常","bizState":"F","rspTime":"20220122111355"}
+2022-01-22 11:14:13.111 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] Starting DzxdzApplication on DESKTOP-PO1IHQL with PID 15256 (D:\ideaProject\dzxdz\target\classes started by wan in D:\ideaProject\dzxdz)
+2022-01-22 11:14:13.115 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] No active profile set, falling back to default profiles: default
+2022-01-22 11:14:14.185 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 11:14:14.186 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$a0082517] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 11:14:14.260 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 11:14:14.601 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] Tomcat initialized with port(s): 8089 (http)
+2022-01-22 11:14:14.608 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Initializing ProtocolHandler ["http-nio-8089"]
+2022-01-22 11:14:14.609 [main] INFO  o.a.catalina.core.StandardService - [] Starting service [Tomcat]
+2022-01-22 11:14:14.610 [main] INFO  o.a.catalina.core.StandardEngine - [] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-01-22 11:14:14.682 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] Initializing Spring embedded WebApplicationContext
+2022-01-22 11:14:14.682 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - [] Root WebApplicationContext: initialization completed in 1521 ms
+2022-01-22 11:14:14.843 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-22 11:14:15.001 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-22 11:14:15.194 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-22 11:14:15.917 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-22 11:14:16.343 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-22 11:14:16.402 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Starting ProtocolHandler ["http-nio-8089"]
+2022-01-22 11:14:16.420 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] Tomcat started on port(s): 8089 (http) with context path ''
+2022-01-22 11:14:16.432 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] Started DzxdzApplication in 3.61 seconds (JVM running for 4.956)
+2022-01-22 11:14:45.441 [http-nio-8089-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-22 11:14:45.442 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - [] Initializing Servlet 'dispatcherServlet'
+2022-01-22 11:14:45.463 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - [] Completed initialization in 21 ms
+2022-01-22 11:14:45.651 [http-nio-8089-exec-2] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"signatureValue":"2"}
+2022-01-22 11:16:04.647 [http-nio-8089-exec-2] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:null
+2022-01-22 11:16:59.106 [http-nio-8089-exec-2] ERROR c.r.d.controller.NoticeController - [] 处理数据异常:
+java.lang.NullPointerException: null
+	at com.rmyh.dzxdz.common.utils.SecurityUtils.AESDecode(SecurityUtils.java:30)
+	at com.rmyh.dzxdz.service.DataProcessService.AESDecode(DataProcessService.java:47)
+	at com.rmyh.dzxdz.service.DataProcessService.handle(DataProcessService.java:91)
+	at com.rmyh.dzxdz.controller.NoticeController.json(NoticeController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2022-01-22 11:16:59.123 [http-nio-8089-exec-2] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"rspCode":"000001","rspMsg":"数据异常","bizState":"F","rspTime":"20220122111518"}
+2022-01-22 11:17:04.541 [http-nio-8089-exec-3] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"encryptedData":"2","signatureValue":"9"}
+2022-01-22 11:17:33.488 [http-nio-8089-exec-3] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:2
+2022-01-22 11:17:39.303 [http-nio-8089-exec-3] ERROR c.r.d.controller.NoticeController - [] 处理数据异常:
+java.lang.IllegalArgumentException: Input byte[] should at least have 2 bytes for base64 bytes
+	at com.rmyh.dzxdz.common.utils.Base64$Decoder.outLength(Base64.java:639)
+	at com.rmyh.dzxdz.common.utils.Base64$Decoder.decode(Base64.java:504)
+	at com.rmyh.dzxdz.common.utils.SecurityUtils.AESDecode(SecurityUtils.java:30)
+	at com.rmyh.dzxdz.service.DataProcessService.AESDecode(DataProcessService.java:47)
+	at com.rmyh.dzxdz.service.DataProcessService.handle(DataProcessService.java:91)
+	at com.rmyh.dzxdz.controller.NoticeController.json(NoticeController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2022-01-22 11:17:39.305 [http-nio-8089-exec-3] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"rspCode":"000001","rspMsg":"数据异常","bizState":"F","rspTime":"20220122111711"}
+2022-01-22 11:18:52.461 [http-nio-8089-exec-6] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"encryptedData":"2","signatureValue":"9"}
+2022-01-22 11:19:01.497 [http-nio-8089-exec-6] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:2
+2022-01-22 11:19:35.655 [http-nio-8089-exec-6] ERROR c.r.d.controller.NoticeController - [] 处理数据异常:
+java.lang.IllegalArgumentException: Input byte[] should at least have 2 bytes for base64 bytes
+	at com.rmyh.dzxdz.common.utils.Base64$Decoder.outLength(Base64.java:639)
+	at com.rmyh.dzxdz.common.utils.Base64$Decoder.decode(Base64.java:504)
+	at com.rmyh.dzxdz.common.utils.SecurityUtils.AESDecode(SecurityUtils.java:30)
+	at com.rmyh.dzxdz.service.DataProcessService.AESDecode(DataProcessService.java:47)
+	at com.rmyh.dzxdz.service.DataProcessService.handle(DataProcessService.java:91)
+	at com.rmyh.dzxdz.controller.NoticeController.json(NoticeController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2022-01-22 11:19:35.657 [http-nio-8089-exec-6] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"rspCode":"000001","rspMsg":"数据异常","bizState":"F","rspTime":"20220122111852"}
+2022-01-22 12:52:26.300 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rmyh.dzxdz.DzxdzApplicationTests], using SpringBootContextLoader
+2022-01-22 12:52:26.311 [main] INFO  o.s.t.c.s.AbstractContextLoader - [] Could not detect default resource locations for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-22 12:52:26.312 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [] Could not detect default configuration classes for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: DzxdzApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-22 12:52:26.478 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Found @SpringBootConfiguration com.rmyh.dzxdz.DzxdzApplication for test class com.rmyh.dzxdz.DzxdzApplicationTests
+2022-01-22 12:52:26.623 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-22 12:52:26.639 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@74f6c5d8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@27912e3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@34b9f960, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@43015c69, org.springframework.test.context.support.DirtiesContextTestExecutionListener@19b89d4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4bbf6d0e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30b6ffe0, org.springframework.test.context.event.EventPublishingTestExecutionListener@791d1f8b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2415fc55, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@14f232c4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@13bc8645, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@24c22fe, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@93081b6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@cd1e646]
+2022-01-22 12:52:26.916 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Starting DzxdzApplicationTests on DESKTOP-PO1IHQL with PID 8408 (started by wan in D:\ideaProject\dzxdz)
+2022-01-22 12:52:26.917 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] No active profile set, falling back to default profiles: default
+2022-01-22 12:52:28.096 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 12:52:28.101 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$267122ee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 12:52:28.244 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 12:52:28.367 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-22 12:52:28.695 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-22 12:52:28.873 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-22 12:52:30.014 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-22 12:52:30.521 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-22 12:52:30.602 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Started DzxdzApplicationTests in 3.918 seconds (JVM running for 5.384)
+2022-01-22 12:52:30.857 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待加密的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 12:52:31.372 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待发送的数据:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122125231","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 12:52:31.403 [http-nio-8089-exec-8] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122125231","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 12:52:34.744 [http-nio-8089-exec-8] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=
+2022-01-22 12:52:34.998 [http-nio-8089-exec-8] INFO  c.r.dzxdz.service.DataProcessService - [] 解密后的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 12:52:34.999 [http-nio-8089-exec-8] INFO  c.r.dzxdz.service.DataProcessService - [] 验签结果:通过
+2022-01-22 12:52:34.999 [http-nio-8089-exec-8] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"bizState":"S","rspTime":"20220122125231"}
+2022-01-22 12:52:35.017 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 返回数据:{"bizState":"S","rspTime":"20220122125231"}
+2022-01-22 12:52:35.041 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Shutting down ExecutorService 'taskScheduler'
+2022-01-22 12:52:35.043 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-22 12:52:35.044 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closing ...
+2022-01-22 12:52:35.046 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closed
+2022-01-22 12:53:12.977 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rmyh.dzxdz.DzxdzApplicationTests], using SpringBootContextLoader
+2022-01-22 12:53:12.982 [main] INFO  o.s.t.c.s.AbstractContextLoader - [] Could not detect default resource locations for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-22 12:53:12.983 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [] Could not detect default configuration classes for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: DzxdzApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-22 12:53:13.114 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Found @SpringBootConfiguration com.rmyh.dzxdz.DzxdzApplication for test class com.rmyh.dzxdz.DzxdzApplicationTests
+2022-01-22 12:53:13.268 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-22 12:53:13.289 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@74f6c5d8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@27912e3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@34b9f960, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@43015c69, org.springframework.test.context.support.DirtiesContextTestExecutionListener@19b89d4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4bbf6d0e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30b6ffe0, org.springframework.test.context.event.EventPublishingTestExecutionListener@791d1f8b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2415fc55, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@14f232c4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@13bc8645, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@24c22fe, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@93081b6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@cd1e646]
+2022-01-22 12:53:13.604 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Starting DzxdzApplicationTests on DESKTOP-PO1IHQL with PID 3428 (started by wan in D:\ideaProject\dzxdz)
+2022-01-22 12:53:13.604 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] No active profile set, falling back to default profiles: default
+2022-01-22 12:53:14.674 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 12:53:14.680 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$5e77cf42] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 12:53:14.821 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 12:53:14.953 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-22 12:53:15.296 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-22 12:53:15.492 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-22 12:53:16.594 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-22 12:53:17.123 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-22 12:53:17.188 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Started DzxdzApplicationTests in 3.841 seconds (JVM running for 5.044)
+2022-01-22 12:53:17.377 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待加密的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 12:53:17.850 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待发送的数据:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122125317","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 12:53:17.882 [http-nio-8089-exec-10] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122125317","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 12:53:17.882 [http-nio-8089-exec-10] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=
+2022-01-22 12:53:17.883 [http-nio-8089-exec-10] INFO  c.r.dzxdz.service.DataProcessService - [] 解密后的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 12:53:17.884 [http-nio-8089-exec-10] INFO  c.r.dzxdz.service.DataProcessService - [] 验签结果:通过
+2022-01-22 12:53:17.884 [http-nio-8089-exec-10] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"bizState":"S","rspTime":"20220122125317"}
+2022-01-22 12:53:17.901 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 返回数据:{"bizState":"S","rspTime":"20220122125317"}
+2022-01-22 12:53:17.926 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Shutting down ExecutorService 'taskScheduler'
+2022-01-22 12:53:17.927 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-22 12:53:17.929 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closing ...
+2022-01-22 12:53:17.929 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closed
+2022-01-22 13:00:12.744 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rmyh.dzxdz.DzxdzApplicationTests], using SpringBootContextLoader
+2022-01-22 13:00:12.751 [main] INFO  o.s.t.c.s.AbstractContextLoader - [] Could not detect default resource locations for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-22 13:00:12.753 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [] Could not detect default configuration classes for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: DzxdzApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-22 13:00:12.873 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Found @SpringBootConfiguration com.rmyh.dzxdz.DzxdzApplication for test class com.rmyh.dzxdz.DzxdzApplicationTests
+2022-01-22 13:00:13.001 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-22 13:00:13.018 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5910de75, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4108fa66, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1f130eaf, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7e0aadd0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@21362712, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27eb3298, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@200a26bc, org.springframework.test.context.event.EventPublishingTestExecutionListener@bc57b40, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1b5bc39d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@655a5d9c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1494b84d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@34abdee4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@71a9b4c7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4628b1d3]
+2022-01-22 13:00:13.313 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Starting DzxdzApplicationTests on DESKTOP-PO1IHQL with PID 13504 (started by wan in D:\ideaProject\dzxdz)
+2022-01-22 13:00:13.314 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] No active profile set, falling back to default profiles: default
+2022-01-22 13:00:14.599 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:00:14.608 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$2372c1e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:00:14.782 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:00:15.026 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-22 13:00:15.308 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-22 13:00:15.543 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-22 13:00:16.850 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:00:17.465 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-22 13:00:17.544 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Started DzxdzApplicationTests in 4.488 seconds (JVM running for 6.096)
+2022-01-22 13:00:17.781 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待加密的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:02:05.175 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待发送的数据:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122130101","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 13:02:19.613 [http-nio-8089-exec-2] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122130101","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 13:02:19.614 [http-nio-8089-exec-2] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=
+2022-01-22 13:02:19.614 [http-nio-8089-exec-2] INFO  c.r.dzxdz.service.DataProcessService - [] 解密后的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:02:19.615 [http-nio-8089-exec-2] INFO  c.r.dzxdz.service.DataProcessService - [] 验签结果:通过
+2022-01-22 13:02:19.615 [http-nio-8089-exec-2] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"bizState":"S","rspTime":"20220122130219"}
+2022-01-22 13:02:27.226 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 返回数据:{"bizState":"S","rspTime":"20220122130219"}
+2022-01-22 13:03:22.089 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Shutting down ExecutorService 'taskScheduler'
+2022-01-22 13:03:22.091 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:03:22.092 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closing ...
+2022-01-22 13:03:22.094 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closed
+2022-01-22 13:03:51.427 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rmyh.dzxdz.DzxdzApplicationTests], using SpringBootContextLoader
+2022-01-22 13:03:51.437 [main] INFO  o.s.t.c.s.AbstractContextLoader - [] Could not detect default resource locations for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-22 13:03:51.438 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [] Could not detect default configuration classes for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: DzxdzApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-22 13:03:51.566 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Found @SpringBootConfiguration com.rmyh.dzxdz.DzxdzApplication for test class com.rmyh.dzxdz.DzxdzApplicationTests
+2022-01-22 13:03:51.687 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-22 13:03:51.703 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5910de75, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4108fa66, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1f130eaf, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7e0aadd0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@21362712, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27eb3298, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@200a26bc, org.springframework.test.context.event.EventPublishingTestExecutionListener@bc57b40, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1b5bc39d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@655a5d9c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1494b84d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@34abdee4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@71a9b4c7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4628b1d3]
+2022-01-22 13:03:52.000 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Starting DzxdzApplicationTests on DESKTOP-PO1IHQL with PID 6160 (started by wan in D:\ideaProject\dzxdz)
+2022-01-22 13:03:52.001 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] No active profile set, falling back to default profiles: default
+2022-01-22 13:03:53.233 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:03:53.239 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$5b0367cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:03:53.430 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:03:53.647 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-22 13:03:53.923 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-22 13:03:54.137 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-22 13:03:55.387 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:03:56.018 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-22 13:03:56.110 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Started DzxdzApplicationTests in 4.368 seconds (JVM running for 5.907)
+2022-01-22 13:03:56.380 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待加密的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:04:26.704 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待发送的数据:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122130411","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 13:05:55.688 [http-nio-8089-exec-4] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122130411","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 13:05:55.688 [http-nio-8089-exec-4] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=
+2022-01-22 13:05:55.689 [http-nio-8089-exec-4] INFO  c.r.dzxdz.service.DataProcessService - [] 解密后的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:05:55.690 [http-nio-8089-exec-4] INFO  c.r.dzxdz.service.DataProcessService - [] 验签结果:通过
+2022-01-22 13:05:55.690 [http-nio-8089-exec-4] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"bizState":"S","rspTime":"20220122130555"}
+2022-01-22 13:07:53.359 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 返回数据:{"bizState":"S","rspTime":"20220122130555"}
+2022-01-22 13:07:53.405 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Shutting down ExecutorService 'taskScheduler'
+2022-01-22 13:07:53.406 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:07:53.408 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closing ...
+2022-01-22 13:07:53.409 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closed
+2022-01-22 13:07:55.452 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rmyh.dzxdz.DzxdzApplicationTests], using SpringBootContextLoader
+2022-01-22 13:07:55.458 [main] INFO  o.s.t.c.s.AbstractContextLoader - [] Could not detect default resource locations for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-22 13:07:55.459 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [] Could not detect default configuration classes for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: DzxdzApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-22 13:07:55.565 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Found @SpringBootConfiguration com.rmyh.dzxdz.DzxdzApplication for test class com.rmyh.dzxdz.DzxdzApplicationTests
+2022-01-22 13:07:55.691 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-22 13:07:55.708 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5910de75, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4108fa66, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1f130eaf, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7e0aadd0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@21362712, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27eb3298, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@200a26bc, org.springframework.test.context.event.EventPublishingTestExecutionListener@bc57b40, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1b5bc39d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@655a5d9c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1494b84d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@34abdee4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@71a9b4c7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4628b1d3]
+2022-01-22 13:07:56.007 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Starting DzxdzApplicationTests on DESKTOP-PO1IHQL with PID 5756 (started by wan in D:\ideaProject\dzxdz)
+2022-01-22 13:07:56.008 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] No active profile set, falling back to default profiles: default
+2022-01-22 13:07:57.415 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:07:57.421 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$59179efd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:07:57.560 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:07:57.791 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-22 13:07:58.072 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-22 13:07:58.301 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-22 13:07:59.706 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:08:00.383 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-22 13:08:00.473 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Started DzxdzApplicationTests in 4.724 seconds (JVM running for 6.564)
+2022-01-22 13:08:00.727 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待加密的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:08:16.297 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待发送的数据:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122130812","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 13:08:49.236 [http-nio-8089-exec-6] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122130812","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 13:08:49.237 [http-nio-8089-exec-6] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=
+2022-01-22 13:08:49.238 [http-nio-8089-exec-6] INFO  c.r.dzxdz.service.DataProcessService - [] 解密后的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:08:49.239 [http-nio-8089-exec-6] INFO  c.r.dzxdz.service.DataProcessService - [] 验签结果:通过
+2022-01-22 13:08:49.240 [http-nio-8089-exec-6] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"bizState":"S","rspTime":"20220122130849"}
+2022-01-22 13:08:49.258 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 返回数据:{"bizState":"S","rspTime":"20220122130849"}
+2022-01-22 13:08:49.281 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Shutting down ExecutorService 'taskScheduler'
+2022-01-22 13:08:49.283 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:08:49.285 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closing ...
+2022-01-22 13:08:49.286 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closed
+2022-01-22 13:09:02.547 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rmyh.dzxdz.DzxdzApplicationTests], using SpringBootContextLoader
+2022-01-22 13:09:02.554 [main] INFO  o.s.t.c.s.AbstractContextLoader - [] Could not detect default resource locations for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-22 13:09:02.554 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [] Could not detect default configuration classes for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: DzxdzApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-22 13:09:02.660 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Found @SpringBootConfiguration com.rmyh.dzxdz.DzxdzApplication for test class com.rmyh.dzxdz.DzxdzApplicationTests
+2022-01-22 13:09:02.774 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-22 13:09:02.794 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@56db847e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@740abb5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@560cbf1a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5fe8b721, org.springframework.test.context.support.DirtiesContextTestExecutionListener@551a20d6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@578524c3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@64c2b546, org.springframework.test.context.event.EventPublishingTestExecutionListener@7e094740, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7a11c4c7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4cc547a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7555b920, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4152d38d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3591009c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5398edd0]
+2022-01-22 13:09:03.097 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Starting DzxdzApplicationTests on DESKTOP-PO1IHQL with PID 10556 (started by wan in D:\ideaProject\dzxdz)
+2022-01-22 13:09:03.098 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] No active profile set, falling back to default profiles: default
+2022-01-22 13:09:04.427 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:09:04.434 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$9ed743fc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:09:04.657 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:09:04.882 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-22 13:09:05.146 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-22 13:09:05.364 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-22 13:09:06.820 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:09:07.475 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-22 13:09:07.578 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Started DzxdzApplicationTests in 4.741 seconds (JVM running for 6.395)
+2022-01-22 13:09:07.857 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待加密的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:09:22.779 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待发送的数据:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122130920","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 13:09:29.263 [http-nio-8089-exec-8] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122130920","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 13:09:29.263 [http-nio-8089-exec-8] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=
+2022-01-22 13:09:29.264 [http-nio-8089-exec-8] INFO  c.r.dzxdz.service.DataProcessService - [] 解密后的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:09:29.265 [http-nio-8089-exec-8] INFO  c.r.dzxdz.service.DataProcessService - [] 验签结果:通过
+2022-01-22 13:09:29.265 [http-nio-8089-exec-8] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"bizState":"S","rspTime":"20220122130929"}
+2022-01-22 13:09:40.066 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 返回数据:{"bizState":"S","rspTime":"20220122130929"}
+2022-01-22 13:09:40.105 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Shutting down ExecutorService 'taskScheduler'
+2022-01-22 13:09:40.107 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:09:40.109 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closing ...
+2022-01-22 13:09:40.110 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closed
+2022-01-22 13:09:46.333 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rmyh.dzxdz.DzxdzApplicationTests], using SpringBootContextLoader
+2022-01-22 13:09:46.343 [main] INFO  o.s.t.c.s.AbstractContextLoader - [] Could not detect default resource locations for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-22 13:09:46.343 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [] Could not detect default configuration classes for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: DzxdzApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-22 13:09:46.461 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Found @SpringBootConfiguration com.rmyh.dzxdz.DzxdzApplication for test class com.rmyh.dzxdz.DzxdzApplicationTests
+2022-01-22 13:09:46.583 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-22 13:09:46.600 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4108fa66, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1f130eaf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7e0aadd0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@21362712, org.springframework.test.context.support.DirtiesContextTestExecutionListener@27eb3298, org.springframework.test.context.transaction.TransactionalTestExecutionListener@200a26bc, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@bc57b40, org.springframework.test.context.event.EventPublishingTestExecutionListener@1b5bc39d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@655a5d9c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1494b84d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@34abdee4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@71a9b4c7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4628b1d3, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@77cf3f8b]
+2022-01-22 13:09:46.916 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Starting DzxdzApplicationTests on DESKTOP-PO1IHQL with PID 10604 (started by wan in D:\ideaProject\dzxdz)
+2022-01-22 13:09:46.916 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] No active profile set, falling back to default profiles: default
+2022-01-22 13:09:48.351 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:09:48.360 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$cafe0ec3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:09:48.545 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:09:48.787 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-22 13:09:49.073 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-22 13:09:49.292 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-22 13:09:50.565 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:09:51.204 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-22 13:09:51.285 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Started DzxdzApplicationTests in 4.648 seconds (JVM running for 6.197)
+2022-01-22 13:09:51.546 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待加密的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:10:01.662 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待发送的数据:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122130957","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 13:11:44.220 [http-nio-8089-exec-10] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122130957","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 13:11:44.220 [http-nio-8089-exec-10] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=
+2022-01-22 13:11:44.221 [http-nio-8089-exec-10] INFO  c.r.dzxdz.service.DataProcessService - [] 解密后的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:11:44.221 [http-nio-8089-exec-10] INFO  c.r.dzxdz.service.DataProcessService - [] 验签结果:通过
+2022-01-22 13:11:44.222 [http-nio-8089-exec-10] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"bizState":"S","rspTime":"20220122131144"}
+2022-01-22 13:34:48.506 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Shutting down ExecutorService 'taskScheduler'
+2022-01-22 13:34:48.508 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:34:48.509 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closing ...
+2022-01-22 13:34:48.512 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closed
+2022-01-22 13:34:51.838 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 返回数据:{"bizState":"S","rspTime":"20220122131144"}
+2022-01-22 13:34:51.868 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Shutting down ExecutorService 'taskScheduler'
+2022-01-22 13:34:51.873 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:34:51.876 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closing ...
+2022-01-22 13:34:51.878 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closed
+2022-01-22 13:35:03.566 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] Starting DzxdzApplication on DESKTOP-PO1IHQL with PID 10716 (D:\ideaProject\dzxdz\target\classes started by wan in D:\ideaProject\dzxdz)
+2022-01-22 13:35:03.570 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] No active profile set, falling back to default profiles: default
+2022-01-22 13:35:04.421 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:35:04.422 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$bec1e4da] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:35:04.487 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:35:04.765 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] Tomcat initialized with port(s): 8089 (http)
+2022-01-22 13:35:04.775 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Initializing ProtocolHandler ["http-nio-8089"]
+2022-01-22 13:35:04.775 [main] INFO  o.a.catalina.core.StandardService - [] Starting service [Tomcat]
+2022-01-22 13:35:04.775 [main] INFO  o.a.catalina.core.StandardEngine - [] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-01-22 13:35:04.857 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] Initializing Spring embedded WebApplicationContext
+2022-01-22 13:35:04.857 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - [] Root WebApplicationContext: initialization completed in 1242 ms
+2022-01-22 13:35:04.985 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-22 13:35:05.130 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-22 13:35:05.320 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-22 13:35:05.939 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:35:06.255 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-22 13:35:06.303 [main] INFO  o.a.coyote.http11.Http11NioProtocol - [] Starting ProtocolHandler ["http-nio-8089"]
+2022-01-22 13:35:06.321 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] Tomcat started on port(s): 8089 (http) with context path ''
+2022-01-22 13:35:06.333 [main] INFO  com.rmyh.dzxdz.DzxdzApplication - [] Started DzxdzApplication in 3.049 seconds (JVM running for 3.738)
+2022-01-22 13:35:12.144 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rmyh.dzxdz.DzxdzApplicationTests], using SpringBootContextLoader
+2022-01-22 13:35:12.150 [main] INFO  o.s.t.c.s.AbstractContextLoader - [] Could not detect default resource locations for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-22 13:35:12.151 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [] Could not detect default configuration classes for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: DzxdzApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-22 13:35:12.289 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Found @SpringBootConfiguration com.rmyh.dzxdz.DzxdzApplication for test class com.rmyh.dzxdz.DzxdzApplicationTests
+2022-01-22 13:35:12.429 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-22 13:35:12.451 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@30b6ffe0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@791d1f8b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2415fc55, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@14f232c4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@13bc8645, org.springframework.test.context.transaction.TransactionalTestExecutionListener@24c22fe, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@93081b6, org.springframework.test.context.event.EventPublishingTestExecutionListener@cd1e646, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7ba8c737, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1890516e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@15a04efb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@16c069df, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2bec854f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@31edaa7d]
+2022-01-22 13:35:12.744 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Starting DzxdzApplicationTests on DESKTOP-PO1IHQL with PID 6868 (started by wan in D:\ideaProject\dzxdz)
+2022-01-22 13:35:12.745 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] No active profile set, falling back to default profiles: default
+2022-01-22 13:35:13.871 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:35:13.876 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$d0164179] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:35:14.012 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:35:14.143 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-22 13:35:14.472 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-22 13:35:14.678 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-22 13:35:15.790 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:35:16.324 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-22 13:35:16.403 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Started DzxdzApplicationTests in 3.901 seconds (JVM running for 5.074)
+2022-01-22 13:35:17.004 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 生成的AES密钥:1611DB281885814A3B3F19E2C5B78937
+2022-01-22 13:35:17.315 [main] INFO  c.r.dzxdz.common.utils.SecurityUtils - [] =======pubKeyStr:MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgrE41EZrZT+Zq0z6RlqaodZgqpYpFYLdFIvSg23inAr5+r4n0lSwU+2ApwmkD0PynPfqsvk4MI34ATYXhlQBuUiSKcb1Simq0DTLxfWKrOATIa2Lk9FTAuJWXIuOKGSkCuIHohjIrL3gch0yCchQU24xdAYkpOb1NQ0Tjq0IhKimtb1g42HIAnsdLECu7F6HypbBZ/wOD9Lm3yllhp0pPDwUVn+AHIB2Bl3qSwSSUsnh5u5TNVel3ruc4NP2spKUpGrB/Ot2hcDwW128/9GGRIf+DfMCiQWrTPzfo6P9D9uQMGYGM/gA/2RpllqTey4t6KwUJnqB3rU9J0m3SIKvzwIDAQAB
+2022-01-22 13:35:17.315 [main] INFO  c.r.dzxdz.common.utils.SecurityUtils - [] =======priKeyStr:MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCCsTjURmtlP5mrTPpGWpqh1mCqlikVgt0Ui9KDbeKcCvn6vifSVLBT7YCnCaQPQ/Kc9+qy+TgwjfgBNheGVAG5SJIpxvVKKarQNMvF9Yqs4BMhrYuT0VMC4lZci44oZKQK4geiGMisveByHTIJyFBTbjF0BiSk5vU1DROOrQiEqKa1vWDjYcgCex0sQK7sXofKlsFn/A4P0ubfKWWGnSk8PBRWf4AcgHYGXepLBJJSyeHm7lM1V6Xeu5zg0/aykpSkasH863aFwPBbXbz/0YZEh/4N8wKJBatM/N+jo/0P25AwZgYz+AD/ZGmWWpN7Li3orBQmeoHetT0nSbdIgq/PAgMBAAECggEAUjU4Eg7Zry56cw5Qv8BuVC6NT8B0x1sxxaLOIG4WhSFCbT7/vYYYBDL5IhkmYZPUIHix4TJy7dffkKN92Lku/GVxy2WjFatwDtem9jalrGimoCCSE8Ev/jhxKnV+Tlo/9biIJKaCVGZ7sEw9FXozTMebw+e5VSESTPSUwMKHASpKHw6mDe1n7GkJ+vUp8/YeVtmM4Umrqt0Q1O9QrJCnjOAz2jSR/LCA8vMnGmf8AXpjCe03J//rJZ3tJkkV1YEI2QqnfR2tjUgDNgUrwPIusHvjPRE9cbv7MjRv2G5IHNRGqOUB3Ai+BpmIRcmDHh4un/fq90DUWKRAzqhojeycQQKBgQDf3xwWCIF6poqGmU8ln/HR0EFiR5tDPC4gAFS5JFXQ7ZBoytrik8QYBWshYJidO/VrQumzTdswO4VGYU8KKSqFvxQLUeQt4AxRSwfNgrVEUEyqw/1sGxasATCFF8xc08aC0qExV0n0pALNz1u1BfuZqe78ZsL/9n8YRbUnj0z0AwKBgQCVcsTU1ki+EkI42mNr7kfu+rtKl1IOaawOi8Plfde9EsIe78t9FdxTczxyfO7fnlEU/jwo8DxNqR4Ts8sYj9J7iF23ESNWF5Y22QoprOpIMnbrAUy127eS2zniihDBGniwLz7tZbrzxQDW2dAqEp/xzbnlIV0eF1qZnFGygnr5RQKBgAI+iViLM0kYfFEHHm0BInp4/P7QOvU8mDXH6xGEFLwodYcnaXRWCOQ4wa8u+bixzi8KF6+teyILprVi6ljuurdmh/vpEUGIenciKmzb/5c0uuAHYPYBe4Oz61maOHlBwj6zf9wvxNUIA+MuTfwNmE0dEAFFwnSwcuu6XyuLWzkjAoGAWQaFOkRsEM3PpQ5zK1hGgZXa/BQoTW2lkQSxLYRJf9gsy0ENdvYOyadb2teRdKRaqKbKL5jsU1brE9GGqpsCR5R0Pxl2c1KZqRKhezIGXfux20xq5ep88H6nfMvCL0YVnt6GHeT7+TrhxRr7ZhSyMtjaZCP71HEVB2yXPj98AgECgYAkMyCFXrOlO/nrIJgEwaMRSgrjSvrgra8CM9w6sDgBzj86y3zGg3hjN4P8wQWdrJ8FftOqBDj2BDZkPW8EUg+bgdg6Qy+q0t57xMecw/2Wsydrao9mAsPLiur1T9Gfi2iJ8LLYrdgGG6lA1Sf6MPhlWa8npC6+EZ7kTYEM59rQQg==
+2022-01-22 13:35:17.320 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待加密的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:35:17.429 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待发送的数据:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122133517","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 13:35:17.516 [http-nio-8089-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-22 13:35:17.517 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - [] Initializing Servlet 'dispatcherServlet'
+2022-01-22 13:35:17.536 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - [] Completed initialization in 19 ms
+2022-01-22 13:35:17.661 [http-nio-8089-exec-1] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122133517","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 13:35:17.675 [http-nio-8089-exec-1] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=
+2022-01-22 13:35:17.867 [http-nio-8089-exec-1] INFO  c.r.dzxdz.service.DataProcessService - [] 解密后的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:35:17.868 [http-nio-8089-exec-1] INFO  c.r.dzxdz.service.DataProcessService - [] 验签结果:通过
+2022-01-22 13:35:17.873 [http-nio-8089-exec-1] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"bizState":"S","rspTime":"20220122133517"}
+2022-01-22 13:35:17.905 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 返回数据:{"bizState":"S","rspTime":"20220122133517"}
+2022-01-22 13:35:17.910 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 验签结果:通过
+2022-01-22 13:35:17.920 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 签名串:HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA==
+2022-01-22 13:35:17.925 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 解密后的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:35:17.930 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 加密后的数据：jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=
+2022-01-22 13:35:17.944 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Shutting down ExecutorService 'taskScheduler'
+2022-01-22 13:35:17.945 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:35:17.945 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closing ...
+2022-01-22 13:35:17.946 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closed
+2022-01-22 13:35:49.704 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rmyh.dzxdz.DzxdzApplicationTests], using SpringBootContextLoader
+2022-01-22 13:35:49.712 [main] INFO  o.s.t.c.s.AbstractContextLoader - [] Could not detect default resource locations for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-22 13:35:49.714 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - [] Could not detect default configuration classes for test class [com.rmyh.dzxdz.DzxdzApplicationTests]: DzxdzApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-22 13:35:49.843 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Found @SpringBootConfiguration com.rmyh.dzxdz.DzxdzApplication for test class com.rmyh.dzxdz.DzxdzApplicationTests
+2022-01-22 13:35:49.989 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-22 13:35:50.015 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@74f6c5d8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@27912e3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@34b9f960, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@43015c69, org.springframework.test.context.support.DirtiesContextTestExecutionListener@19b89d4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4bbf6d0e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30b6ffe0, org.springframework.test.context.event.EventPublishingTestExecutionListener@791d1f8b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2415fc55, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@14f232c4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@13bc8645, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@24c22fe, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@93081b6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@cd1e646]
+2022-01-22 13:35:50.347 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Starting DzxdzApplicationTests on DESKTOP-PO1IHQL with PID 9184 (started by wan in D:\ideaProject\dzxdz)
+2022-01-22 13:35:50.348 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] No active profile set, falling back to default profiles: default
+2022-01-22 13:35:51.495 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:35:51.502 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$92c48717] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:35:51.646 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - [] Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-22 13:35:51.766 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [] Init DruidDataSource
+2022-01-22 13:35:52.064 [main] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} inited
+2022-01-22 13:35:52.251 [main] WARN  c.b.m.core.metadata.TableInfoHelper - [] Warn: Could not find @TableId in Class: com.rmyh.dzxdz.entity.EleCarryCerInfoDO.
+2022-01-22 13:35:53.350 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:35:53.854 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Initializing ExecutorService 'taskScheduler'
+2022-01-22 13:35:53.933 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] Started DzxdzApplicationTests in 3.868 seconds (JVM running for 5.044)
+2022-01-22 13:35:54.169 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待加密的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:35:54.681 [main] INFO  c.r.dzxdz.service.DataProcessService - [] 待发送的数据:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122133554","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 13:35:54.710 [http-nio-8089-exec-5] INFO  c.r.d.controller.NoticeController - [] 接收到的报文:{"apiKey":"dzxdz","encryptedData":"jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=","reqTime":"20220122133554","signatureValue":"HMb5YnlMrVB/AjaKI2ZG2d3dcEov9LDsALzHy70TBiL+U33S2t3XYt1X3oSltzoE/DNedRQiST9JlVdazfXUAvA2vrGAVgVNzL8cG0I2+0pod2Q8KI934kPgfYef46iTiUBA5hUm3MH70UxQtxSIorS+BwkA2UoPdKgosAr1GMczrVlwZWTePCUeVRuGH0/tgcABoe5qlQYJqF4wjIVVRnEkl/nAP9keoCMRQEih3FdZkNGS0zD0RHLmvJPAyfTz0Ht5Sx9m1KgbMVoYT4hxk2mPfr+zd69nWh9Bpnwrn92fL0mEGbjpVFLFW/esFCi5LngeRf2ovf1LRHNhudirvA=="}
+2022-01-22 13:35:54.711 [http-nio-8089-exec-5] INFO  c.r.dzxdz.service.DataProcessService - [] 待解密的数据:jLpUSDyd/szROoFMUSLznjAAwPGg1GRc8MPCKWFw1ELfx6lY3afN6foWuHgzETK+0+E1Nk64Z5+G1UM0+5QMZBb6HIkmFhvQ0ULceDPZI+JpC7WzZO6v2IB56XuU799+qgdPDujhxGPmHsLOVoOXQycky5IsONobvchdV4w3T4v/CAgIWUy0u+E3uumE2TcxgUbD943ixLtHl+38Ir8yBb6p8Xe9d42Ch3dIOKoApk6R5lFF0mI33Pb3f7M+Cl7Fj2smtGCZ0QjdSj3s8sFzuEWWhEw2UVuVDvBcAPet54LJvkN5yH7OnU/9d2SbsrOEjymMakL+bX00zSkzZ5AeaQGaN3xC6GvS5BOdYlztDBw=
+2022-01-22 13:35:54.711 [http-nio-8089-exec-5] INFO  c.r.dzxdz.service.DataProcessService - [] 解密后的数据:{
+	"reimNo":"NO0000001",
+	"accountCode":"6222621310031088988",
+	"accountName":"交行客户",
+	"bankName":"交通银行深圳分行",
+	"tranferMoeny":"20.02",
+	"payAccountCode":"500015455585512",
+	"payAccountName":"张老*",
+	"payBankName":"招商银行"
+}
+
+2022-01-22 13:35:54.712 [http-nio-8089-exec-5] INFO  c.r.dzxdz.service.DataProcessService - [] 验签结果:通过
+2022-01-22 13:35:54.713 [http-nio-8089-exec-5] INFO  c.rmyh.dzxdz.common.utils.JsonUtils - [] 返回报文:{"bizState":"S","rspTime":"20220122133554"}
+2022-01-22 13:35:54.728 [main] INFO  com.rmyh.dzxdz.DzxdzApplicationTests - [] 返回数据:{"bizState":"S","rspTime":"20220122133554"}
+2022-01-22 13:35:54.747 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - [] Shutting down ExecutorService 'taskScheduler'
+2022-01-22 13:35:54.748 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - [] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-22 13:35:54.749 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closing ...
+2022-01-22 13:35:54.750 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - [] {dataSource-1} closed
