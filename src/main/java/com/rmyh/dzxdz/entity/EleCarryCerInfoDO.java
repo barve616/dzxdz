@@ -24,7 +24,6 @@ import java.util.Date;
 @Data
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
 @TableName("电子携带证_主表")
 public class EleCarryCerInfoDO implements Serializable {
 
@@ -34,7 +33,7 @@ public class EleCarryCerInfoDO implements Serializable {
      * 携带证编号
      */
     @TableField(value = "携带证编号")
-   @TableId(value = "携带证编号")
+    @TableId("携带证编号")
     private String certificateNo;
 
     /**
