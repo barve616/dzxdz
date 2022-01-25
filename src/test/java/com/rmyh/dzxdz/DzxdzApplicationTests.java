@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.rmyh.dzxdz.common.utils.SecurityUtils;
 import com.rmyh.dzxdz.entity.EleCarryCerInfoDO;
 import com.rmyh.dzxdz.repository.EleCarryCerInfoMapper;
+import com.rmyh.dzxdz.repository.SearchCertificateMapper;
 import com.rmyh.dzxdz.service.DataProcessService;
 import com.rmyh.dzxdz.service.HttpService;
 import lombok.extern.slf4j.Slf4j;
@@ -30,6 +31,11 @@ class DzxdzApplicationTests {
     private EleCarryCerInfoMapper eleCarryCerInfoMapper;
     @Autowired
     private HttpService httpService;
+
+    @Autowired
+    SearchCertificateMapper searchCertificateMapper;
+
+    private String certificateNo="{\"certificateNo\":\"6050422ba4584f44a63c20575facb4f0\"}";
     private String data = "{\n" +
             "\t\"reimNo\":\"NO0000001\",\n" +
             "\t\"accountCode\":\"6222621310031088988\",\n" +
@@ -56,7 +62,7 @@ class DzxdzApplicationTests {
     //使用AES加密
     @Test
     void aesEncode() throws Exception{
-        String aesStr = dataProcessService.AESEncode(data);
+        String aesStr = dataProcessService.AESEncode(certificateNo);
         log.info("加密后的数据：{}", aesStr);
     }
 
@@ -71,8 +77,9 @@ class DzxdzApplicationTests {
     //使用RSA加签
     @Test
     void rsaSign() throws Exception{
-        String signStr = dataProcessService.RSASign(data);
+        String signStr = dataProcessService.RSASign(certificateNo);
         log.info("签名串:{}", signStr);
+
     }
 
     //使用RSA验签
@@ -98,7 +105,8 @@ class DzxdzApplicationTests {
         QueryWrapper queryWrapper=new QueryWrapper();
         queryWrapper.eq("携带证编号","6050422ba4584f44a63c20575facb4f0");
         Page<EleCarryCerInfoDO> eleCarryCerInfoDOPage = eleCarryCerInfoMapper.selectPage(new Page<>(1, 2), queryWrapper);
-        System.out.println(JSON.toJSON(eleCarryCerInfoDOPage));
+        EleCarryCerInfoDO eleCarryCerInfoDO = eleCarryCerInfoMapper.selectById("6050422ba4584f44a63c20575facb4f0");
+        System.out.println(JSON.toJSON(eleCarryCerInfoDO));
 
 
 

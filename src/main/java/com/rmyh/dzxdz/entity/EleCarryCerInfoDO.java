@@ -15,7 +15,7 @@ import java.util.Date;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author zhang_jf
@@ -34,6 +34,7 @@ public class EleCarryCerInfoDO implements Serializable {
      * 携带证编号
      */
     @TableField(value = "携带证编号")
+   @TableId(value = "携带证编号")
     private String certificateNo;
 
     /**

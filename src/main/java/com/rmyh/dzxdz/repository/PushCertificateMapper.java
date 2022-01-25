@@ -13,6 +13,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @since 2022-01-20
  */
 @Mapper
-public interface EleCarryCerInfoMapper extends BaseMapper<EleCarryCerInfoDO> {
+public interface PushCertificateMapper extends BaseMapper<EleCarryCerInfoDO> {
 
 }

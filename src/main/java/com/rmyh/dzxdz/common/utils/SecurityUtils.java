@@ -20,7 +20,7 @@ public class SecurityUtils {
 
     /**
      * AES解密
-     * 
+     *
      * @param data
      * @param key
      * @return
@@ -125,7 +125,7 @@ public class SecurityUtils {
         signature.update(data.getBytes(CommonConstants.CHARTSET));
         return signature.verify(decodeSign);
     }
-    
+
     /**
      * 生成AES秘钥
      *
@@ -133,18 +133,18 @@ public class SecurityUtils {
      * @throws Exception
      */
     public static String genAesKey(int lenth) throws Exception {
-    	
+
     	KeyGenerator kgen = KeyGenerator.getInstance(CommonConstants.ENCRYPT_ALGORITHM);
     	kgen.init(lenth);
     	SecretKey sKey = kgen.generateKey();
-    	
-    	return new String(parseByte2HexStr(sKey.getEncoded()));
-    	
-    }
-    
 
-    
-    
+    	return new String(parseByte2HexStr(sKey.getEncoded()));
+
+    }
+
+
+
+
     /**
      * 生成公私钥对
      *
@@ -166,30 +166,32 @@ public class SecurityUtils {
         log.info("=======pubKeyStr:{}", pubKeyStr);
 
         log.info("=======priKeyStr:{}", priKeyStr);
-        
+
         keyMap.put("RSAPUBKEY", pubKeyStr);
         keyMap.put("RSAPRIKEY", priKeyStr);
         return keyMap;
     }
-    
+
     public static void main(String[] args) throws Exception {
 //    	genRsaKey();
-    	String pubKeyStr ="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAh7u+HXib8YRx3dxYyZIjs5ZwMvC+Gp3OmCHuzoixfp1MJrDc4ZKYJwGTsJWyneCOqRIwKkWQUK64pLqD6kj2t704oWAr8cG1/fzwPXnkhLyBvkjFXbXfXjQrQUGqcd1mBoMCNfCYegjM4aReJS4gQXZixXdAE1CgD1i0/KeBN8SEHOEscsLlnPihYv3+qK9eYjz/wdEX+lf7K8jGz5GI8BV7n3S7VTQ8U49NFNMLcbGrSOIq+enah8LQWBGi/s06nNPVeJAEO9Z2id6bWVsvCutpFsMvRJCgl4c8vm5j+0eTjl2jj0725gbEjZ9W5gUNBC9H58JHDnRHW0ix028BDwIDAQAB";
-    	String priKeyStr = "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCHu74deJvxhHHd3FjJkiOzlnAy8L4anc6YIe7OiLF+nUwmsNzhkpgnAZOwlbKd4I6pEjAqRZBQrrikuoPqSPa3vTihYCvxwbX9/PA9eeSEvIG+SMVdtd9eNCtBQapx3WYGgwI18Jh6CMzhpF4lLiBBdmLFd0ATUKAPWLT8p4E3xIQc4SxywuWc+KFi/f6or15iPP/B0Rf6V/sryMbPkYjwFXufdLtVNDxTj00U0wtxsatI4ir56dqHwtBYEaL+zTqc09V4kAQ71naJ3ptZWy8K62kWwy9EkKCXhzy+bmP7R5OOXaOPTvbmBsSNn1bmBQ0EL0fnwkcOdEdbSLHTbwEPAgMBAAECggEAKD3LIaWuZi5kK+i2EhzXpNjHLvMdCXsb0xLMYEM6jFVKTHZHJkF2Bqp7BPF84T3ATfPsf7vcC2+hooUBsyYqr1LURVPj82sA7+pbt3459/iDZszgZuYS8TT6VgCH7fY711ZkA2Xvbs7JH2TB3LgOLBpTMkQmpRNUQPiFwBpRPxz/kByWdAJ74myI8hYrEodjVlXmDQnqnCBzjyA5BmVFLFtU/bKo5fXlk9RPGzDv2SK8ylBiGIkp0Pr0aI95WQOakAzGPr0JPBwPGQANamFuVINGJXFyB15frJByrwQAZ+fA9kALUM0KefgFia7ksr+Tap9OrjSDgZHKPv2C0Mc1cQKBgQDAW+GN4m9Q74D7jOuSh2x+KrdQF8JEpUu3lqHxuDGAeK8gEejuWKKB+sOLt6xJxjwCWxBBOXhAMxvAfv8g2pJKQpEI+8gEeCvXt6X6QFGFW0cAD5Zi8k4nn/tdOPYkFU7bzVeD3xULrC7ftvwV/B5tVCd+t2i/1ET18ekFjUATEwKBgQC0o+Dwey4+J8HBT+eB9zmuXUsTky+IIDn8tDju/HeEeqkjwRff8354rwtT9goSq/qaBt1D1W3NvVXAMfttFKTtndwoYTpB4+cveWc2XttUEoryTquvZ08N+DQbm9UrvbSCjSAjUE3MCha4oBXgGtTBcM4In0WO13T3VWciAbJdlQKBgQCX5HW4+gJ4YIbzG5WxAOq0vbo+rmQinHurnnCGVLISBjoTEtFh0++Ov5rFquWK49Pi8FFnj5/a4gCaAi4nnTBDH0kzVM3eaZ4FGukfMMaujSMFc0mHHFqGg5eTRzVlzMWWXxEp+m+95dqloPJx0cGdBwSg1OcMAuvpYXplfeIIrQKBgBHw2M1pno0jy7WUZwzcbgkoUOWPz7+4W6oCiEkMIB6zRAs+CU3/1AbOc9SR8iwqkogruFwdXXt6m4KsNCmATGUhMZV9Gpkitnpbl2mqACSYdt5b++c+3nYnuZ0oXAKtI7l3pMJ9Hkzuj5UkqSeJ4qmXt47ZqsHmGkLaY5TYEEwFAoGBAL4BP/we+pxRX1ACaBGiuECmC4D7WrajNXJ7jxThEPgtuv7uyLSSmUJz55V0oB5Ayydpsn90pfpfN8aEUGHZ6/ejvKGfJTopciBZcHzhb8Ib1XOGHaQtHwdOuAleINrGUl/7yCT2MxijUt8cXwE+rAvswbb/9/Fuu2/tTYGsVsjG";
-    	String a= "admin:password";
-    	
+        //人行公钥
+    	String pubKeyStr ="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoJlYZa+8twSIhINp/7yJQiNyv2L9YmOy2nusskEESzKP8Axcvq2vyn4k4I1ZRMS20XZyn0JJztXs1l3a7k2M2cPIu4fpK2e8H11NDEZcPcKpM+BUADJado6qr2ci0dmC1ZIJoHgeqhE2uWNnb26gQbHBwxzqjYXjge5OBFQWf1EAQs9+r/uUnPxxuAedQeBW03NYCR46Kwi0kZSy5jW1fvuBCbiFmuZY+5i183rTGnIZjoYWylcic5lf+M0zx9FaAT0HnF7/5Afnfyr914ojiNLxb0rGv29lyWQTk4Ht1UKio2EwR1eryat7S7MLYYntBRZ/A/sydX7QJk4P6PcruwIDAQAB";
+    	//人行私钥
+    	String priKeyStr = "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCgmVhlr7y3BIiEg2n/vIlCI3K/Yv1iY7Lae6yyQQRLMo/wDFy+ra/KfiTgjVlExLbRdnKfQknO1ezWXdruTYzZw8i7h+krZ7wfXU0MRlw9wqkz4FQAMlp2jqqvZyLR2YLVkgmgeB6qETa5Y2dvbqBBscHDHOqNheOB7k4EVBZ/UQBCz36v+5Sc/HG4B51B4FbTc1gJHjorCLSRlLLmNbV++4EJuIWa5lj7mLXzetMachmOhhbKVyJzmV/4zTPH0VoBPQecXv/kB+d/Kv3XiiOI0vFvSsa/b2XJZBOTge3VQqKjYTBHV6vJq3tLswthie0FFn8D+zJ1ftAmTg/o9yu7AgMBAAECggEATtU3KSMstYIKKVIAtEIt9kNETmIfEy7xWoIe8ZksrGTzdtf6prbHddSZ8Ygw66rMOuGzvi1h4Z/tFAUaNKPoofSTEkrS0DWpiJPaAE6BdOea+xYA5d/RvCSn8FXmJ7BnosJ+60BLfRvaCwKagX6CN/0zqb0F/dZdKSh7L3C/Ylrqc4ogKPtMmJdg5l/pCMQXA9fEWJXe/GGIZu0nfQDuXtSmDQgjF2ecT35GvkpTves1MMTWcGWfgCasQ4+zjT52E6B/zKYHZaPE3DIemkqPp4YwFyk0X73CiEvoHbfJPRoq5xTYgxVlc4H5kmRuMAzmlUiUm99s0KtmA389DUO6cQKBgQD92fhd+urV4HiUD5IK/06lOq3f0e1E66P8KIWkgEFbqsVMjrEpVpe2RC7Px7W7zx+zBA4hnUQwdoJpKB8v7QBDA0u+w60GVu8M2LjBoLGS6Ej+cyoVnVQRMwRjFZ+6NL8vdk4a8VxLQwNDyBHlc1UmHg/L4DUEVdtqqMKtlHoBrwKBgQCh9VJIrZbmVbu7rjbWW1s/rKzlBtagFQGoB5yvPRB6fUYAhOkm49qdP6lBsjsiuDUz6f4t00M7ylV+HEtYqSDtVy0FEcDjIQGIs6oHRrRTbnhZiIYDbKtpKmZe4VseoKEuD65DIAuTIUOrnU0UAYDAlSHF1jfHd9scals8ScF1tQKBgQCyE3RNyTVv79XmV73lhRAQjMdomYVOsdcJjwuhSG+Q9I0PlZHmI96td8s26ywrobLlC9U183LgZGI7jm/CWQmz+N3r5qy8I8PySR3ihu3K1rRN+0/sdb+BiT5sm8C/CT2M9/r2n5ZVHZ9ury0Ovwdeg/wk0xWeAvS3L8fRqLSl9QKBgFYx2OQDNt9JW4uMMXUt08d0n+OYGxvBcks6GeKNrjpyd5IJKojfFVdBLVRgheZ5gR8q9nLvD8Y/bfabGmKKSJLoJXagNzbqNwXJEMGkmI4aqgSEi0ZBTIzA2xC+AR+wv3djMwxYfrCEMJ6iLgZqslpMRFglJTSMjll2JS5V1pdNAoGBALHlxi1slOw1w1QNUujOB43zYj0LywuX1hiw49DIJZD4r+UNMlTWvM5AIj7y69ZuQJWQE0vYCAdxMaf5N5NgXtx2pjZSJZKezJzmzsGBEn9U76jTNPw+/tzPahpCa5UZsaaFNNu/+SmCrdJeKIFo05xCubtYThZz+HudBxDOnXht";
+//    	String a= "admin:password";
+
     	//RSA加密/解密测试
 //    	String rsaEpt = MD5withRSAEncrypt(a,pubKeyStr);
 //    	System.out.println("=======rsaEpt: "+rsaEpt);
 //    	String ss = MD5withRSADecrypt(rsaEpt,priKeyStr);
 //    	System.out.println("=======ss: "+ss);
-    	
+
     	//RSA签名/验签
-    	String rsaSign = RSASign(a,priKeyStr);
-    	System.out.println("=======rsaSign: "+rsaSign);
-    	boolean rsaVfy = RSAVerify(a, rsaSign, pubKeyStr);
-    	System.out.println("=======rsaVfy: "+rsaVfy);
-    	
+//    	String rsaSign = RSASign(a,priKeyStr);
+//    	System.out.println("=======rsaSign: "+rsaSign);
+//    	boolean rsaVfy = RSAVerify(a, rsaSign, pubKeyStr);
+//    	System.out.println("=======rsaVfy: "+rsaVfy);
+
     	//AES加密/解密测试
 //    	System.out.println(genAesKey(128).length());
 //    	System.out.println(genAesKey(128));
@@ -199,39 +201,56 @@ public class SecurityUtils {
 //    	//d7482e704a5f192d66beca0a0114fab0
 //    	String decodeStr = AESDecode(encodeStr,key);
 //    	System.out.println(decodeStr);
-    	
+        //推送出境信息
+//        String str = "{ \"certificateNo\":\"NO0000001\", \"carryCcy\":\"USD\", \"carryAmount\":\"100\", \"dollarAmount\":\"100\", \"departureDate\":\"20220117\", \"isNormal\":\"0\" }";
+        //查询电子携带证信息（以证件号形式）
+//        String str = "{\"idType\":\"01\",\"idNo\":\"44334333433332\"}";
+        String key = "15240A5E7FCF31E618E93D60CC2B8ED6";
+        String str="{\"certificateNo\":\"NO0000001\"}";
+
+        String encodeStr = AESEncode(str, key);
+        System.out.println("=====encodeStr: " + encodeStr);
+        String decodeStr = AESDecode(encodeStr,key);
+    	System.out.println("=====decodeStr: " + decodeStr);
+
+        //RSA签名
+        String rsaSign = RSASign(str,priKeyStr);
+        System.out.println("=======rsaSign: "+rsaSign);
+        //验签
+        boolean rsaVfy = RSAVerify(str, rsaSign, pubKeyStr);
+        System.out.println("=======rsaVfy: "+rsaVfy);
     }
-	
-    /**将二进制转换成16进制 
-     * @param buf 
-     * @return 
-     */  
-    public static String parseByte2HexStr(byte buf[]) {  
-            StringBuffer sb = new StringBuffer();  
-            for (int i = 0; i < buf.length; i++) {  
-                    String hex = Integer.toHexString(buf[i] & 0xFF);  
-                    if (hex.length() == 1) {  
-                            hex = '0' + hex;  
-                    }  
-                    sb.append(hex.toUpperCase());  
-            }  
-            return sb.toString();  
-    } 
-    
-    /**将16进制转换为二进制 
-     * @param hexStr 
-     * @return 
-     */  
-    public static byte[] parseHexStr2Byte(String hexStr) {  
-            if (hexStr.length() < 1)  
-                    return null;  
-            byte[] result = new byte[hexStr.length()/2];  
-            for (int i = 0;i< hexStr.length()/2; i++) {  
-                    int high = Integer.parseInt(hexStr.substring(i*2, i*2+1), 16);  
-                    int low = Integer.parseInt(hexStr.substring(i*2+1, i*2+2), 16);  
-                    result[i] = (byte) (high * 16 + low);  
-            }  
-            return result;  
+
+    /**将二进制转换成16进制
+     * @param buf
+     * @return
+     */
+    public static String parseByte2HexStr(byte buf[]) {
+            StringBuffer sb = new StringBuffer();
+            for (int i = 0; i < buf.length; i++) {
+                    String hex = Integer.toHexString(buf[i] & 0xFF);
+                    if (hex.length() == 1) {
+                            hex = '0' + hex;
+                    }
+                    sb.append(hex.toUpperCase());
+            }
+            return sb.toString();
     }
-	
+
+    /**将16进制转换为二进制
+     * @param hexStr
+     * @return
+     */
+    public static byte[] parseHexStr2Byte(String hexStr) {
+            if (hexStr.length() < 1)
+                    return null;
+            byte[] result = new byte[hexStr.length()/2];
+            for (int i = 0;i< hexStr.length()/2; i++) {
+                    int high = Integer.parseInt(hexStr.substring(i*2, i*2+1), 16);
+                    int low = Integer.parseInt(hexStr.substring(i*2+1, i*2+2), 16);
+                    result[i] = (byte) (high * 16 + low);
+            }
+            return result;
+    }
+
 }

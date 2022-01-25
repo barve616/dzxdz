@@ -1,5 +1,6 @@
 package com.rmyh.dzxdz.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.rmyh.dzxdz.common.constant.CommonMessageCode;
 import com.rmyh.dzxdz.common.enums.BizStateEnum;
@@ -59,6 +60,8 @@ public class TestController {
         eleCarryCerInfoDO.setIdType("01");
         eleCarryCerInfoDO.setIdNo("440304");
         eleCarryCerInfoMapper.insert(eleCarryCerInfoDO);
+        EleCarryCerInfoDO eleCarryCerInfoDO1 = eleCarryCerInfoMapper.selectById("61e3321c7b034ca19b07413c135c3d05");
+        System.out.println(JSON.toJSON(eleCarryCerInfoDO1));
     }
 
 }

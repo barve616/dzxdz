@@ -86,20 +86,6 @@ public class DataProcessService {
     public BizDataDTO handle(PubReqDTO pubReqDTO) throws Exception{
         String encryptedData = pubReqDTO.getEncryptedData();
         String signatureValue = pubReqDTO.getSignatureValue();
-
-
-        //加密
-
-
-        //加签
-
-
-
-
-
-
-
-
         log.info("待解密的数据:{}", encryptedData);
         String plainData = AESDecode(encryptedData);
         log.info("解密后的数据:{}", plainData);
@@ -108,7 +94,6 @@ public class DataProcessService {
         BizDataDTO bizDataDTO = new BizDataDTO();
         bizDataDTO.setPlainData(plainData);
         bizDataDTO.setSignResult(signResult);
-
         return bizDataDTO;
     }
 
