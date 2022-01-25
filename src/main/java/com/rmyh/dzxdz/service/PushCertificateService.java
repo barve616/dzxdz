@@ -47,10 +47,11 @@ public class PushCertificateService {
     /**
      * 处理待发送的数据
      *
-     * @param data
+     * @param remark
      * @return JSONObject
      */
-    public JSONObject querCert(String data)throws Exception {
+    public JSONObject querCert(String remark)throws Exception {
+
         List<EleCarryCerInfoDO> eleCarryCerInfoDOS = pushCertificateMapper.selectList(null);
 
         JSONObject jsonObject = dataProcessService.handlePlainData(JSON.toJSONString(eleCarryCerInfoDOS));
